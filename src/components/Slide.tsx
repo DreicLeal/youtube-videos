@@ -35,11 +35,11 @@ export default function Slide() {
     <div
       onTouchStart={handleStart}
       onTouchMove={handleMove}
-      className="flex items-center justify-center relative overflow-hidden rounded-md"
+      className="flex items-center justify-center relative overflow-hidden rounded-md w-[240px]"
     >
       <div
         className={`${
-          slideLeft && "translate-x-[0px]"
+          slideLeft && "translate-x-0"
         } p-4 absolute translate-x-[-70px] left-0 bg-green-500 w-[70px] text-center transition duration-300`}
       >
         Left
@@ -47,13 +47,13 @@ export default function Slide() {
       <div
         className={`p-4 ${slideLeft && "translate-x-[70px]"} ${
           slideRight && "translate-x-[-70px]"
-        } bg-slate-500 w-[240px] text-center transition duration-300`}
+        } bg-slate-500 w-full text-center transition duration-300`}
       >
         Center
       </div>
       <div
         className={`${
-          slideRight && "translate-x-[0px]"
+          slideRight && "translate-x-0"
         } p-4 right-0 absolute bg-blue-500 w-[70px] translate-x-[70px] text-center transition duration-300`}
       >
         Right

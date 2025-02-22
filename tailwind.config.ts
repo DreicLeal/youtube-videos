@@ -10,14 +10,12 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        lifetime : {
-          "0%": {width:"100%"},
-          "100%": {width:"0%"}
+        lifetime: {
+          "0%": { width: "100%" },
+          "100%": { width: "0%" },
         },
       },
-      animation: {
-        lifetime: "lifetime 3s linear forwards"
-      },
+      animation: { lifetime: "lifetime 3s linear forwards" },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -25,12 +23,12 @@ export default {
     },
   },
   plugins: [
-    plugin(({addUtilities}) => {
+    plugin(({ addUtilities }) => {
       addUtilities({
-        ".animation-p":{
-          animationPlayState:"paused"
-        }
-      })
-    })
+        ".animation-p": {
+          animationPlayState: "paused",
+        },
+      });
+    }),
   ],
 } satisfies Config;
