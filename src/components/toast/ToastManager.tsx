@@ -30,9 +30,7 @@ export default function ToastManager() {
       timeoutRef.current = null;
       if (startTimeRef.current) {
         const elapsedTime = Date.now() - startTimeRef.current;
-        console.log(elapsedTime);
         remainingTimeRef.current -= elapsedTime;
-        console.log(remainingTimeRef.current);
       }
     }
   };
@@ -58,9 +56,10 @@ export default function ToastManager() {
 
   return (
     <div className="w-full h-[100vh] bg-slate-600 p-4">
-      <form 
-      className="flex flex-col items-center justify-center mx-auto my-0 p-4 gap-2 bg-slate-800 w-fit rounded-md"
-      onSubmit={(e) => handleSubmit(e)}>
+      <form
+        className="flex flex-col items-center justify-center mx-auto my-0 p-4 gap-2 bg-slate-800 w-fit rounded-md"
+        onSubmit={(e) => handleSubmit(e)}
+      >
         <label className="flex flex-col">
           Title:
           <input
@@ -81,13 +80,19 @@ export default function ToastManager() {
             onChange={(e) => setFormMessage(e.target.value)}
           />
         </label>
-        <button className="bg-slate-500 w-[90%] rounded-md" type="submit">Show Toast</button>
+        <button className="bg-slate-500 w-[90%] rounded-md" type="submit">
+          Show Toast
+        </button>
       </form>
       {showToast && (
-        <div className="fixed top-3 right-3" onMouseEnter={freezeToast} onMouseLeave={resumeToast}>
+        <div
+          className="fixed top-3 right-3"
+          onMouseEnter={freezeToast}
+          onMouseLeave={resumeToast}
+        >
           <Toast title={toastTitle} message={toastMessage} />
         </div>
-     )} 
+      )}
     </div>
   );
 }
