@@ -1,7 +1,9 @@
-import Carousel from "@/components/Carousel";
+// import Carousel from "@/components/Carousel";
 // import Slide from "@/components/Slide";
 // import ToastManager from "@/components/toast/ToastManager";
 // import TodoList from "@/components/todoList/TodoList";
+
+import Chat from "@/components/Chat";
 
 export default function Home() {
   return (
@@ -9,7 +11,8 @@ export default function Home() {
       {/* <TodoList/> */}
       {/* <ToastManager/> */}
       {/* <Slide/> */}
-      <Carousel />
+      {/* <Carousel /> */}
+      <Chat/>
     </main>
   );
 }
